@@ -18,8 +18,6 @@ public class Main {
         cat.takeForAWalk();
         cat.takeForAWalk();
         cat.takeForAWalk();
-        cat.takeForAWalk();
-        cat.takeForAWalk();
         cat.feed();
 
         System.out.println(cat.weight);
@@ -34,6 +32,10 @@ public class Main {
 
         me.car = myCar;
         System.out.println(me.car.model);
+
+        me.setSalary(200.0);
+        me.getSalary();
+
         //ctrl + alt + l
     }
 }
