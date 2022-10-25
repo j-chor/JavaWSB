@@ -6,7 +6,21 @@ public class Human {
     String lastName;
     Animal pet;
     Integer yearOfBirth;
-    Car car;
+    private Car car;
+
+    public Car getCar() {
+        return this.car;
+    }
+
+    public void setCar(Car car) {
+        if (this.salary >= car.value) {
+            System.out.println("Kupiono samochód za gotówkę");
+            this.car = car;
+        } else if (this.salary >= car.value * (1 / 12)) {
+            System.out.println("Kupiono samochód na kredyt (trudno)");
+            this.car = car;
+        } else System.out.println("Za mało kasy zarabiasz, zmień pracę i weź kredyt");
+    }
 
     private Double salary;
 

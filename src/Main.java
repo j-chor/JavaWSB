@@ -29,12 +29,14 @@ public class Main {
         Car myCar = new Car("Fiat", "Punto");
         myCar.color = "Zielony";
         myCar.year = 1999;
+        myCar.value = 100.0;
 
-        me.car = myCar;
-        System.out.println(me.car.model);
 
         me.setSalary(200.0);
         me.getSalary();
+
+        me.setCar(myCar);
+        System.out.println(me.getCar().model);
 
         //ctrl + alt + l
     }

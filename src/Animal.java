@@ -9,6 +9,7 @@ public class Animal {
             this.isAlive = false;
         }
     }
+
     Animal(String species) {
         this.isAlive = true;
         this.species = species;
@@ -24,7 +25,7 @@ public class Animal {
         }
     }
 
-    void takeForAWalk () {
+    void takeForAWalk() {
         checkWeight();
         if (this.isAlive) {
             this.weight -= 0.5;
