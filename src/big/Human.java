@@ -1,13 +1,19 @@
+package big;
+
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
 
-public class Human {
+public class Human extends Animal {
     String firstName;
     String lastName;
     Animal pet;
     Integer yearOfBirth;
     private Car car;
 
+    public Human() {
+        super("homo sapiens");
+        this.salary = 0.0;
+    }
     public Car getCar() {
         return this.car;
     }
@@ -42,4 +48,8 @@ public class Human {
         this.salary = salary;
     }
 
+    @Override
+    public void feed(Double foodWeight) {
+
+    }
 }

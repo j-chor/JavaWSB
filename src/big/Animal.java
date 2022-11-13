@@ -1,4 +1,6 @@
-public class Animal {
+package big;
+
+public abstract class Animal implements Feedable {
     String species;
     String name;
     Double weight;
@@ -15,7 +17,7 @@ public class Animal {
         this.species = species;
     }
 
-    void feed() {
+    public void feed() {
         checkWeight();
         if (this.isAlive) {
             this.weight += 0.5;
