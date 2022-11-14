@@ -41,6 +41,9 @@ public class Main {
         System.out.println(newCar == myCar);
         System.out.println(newCar);
 
+        myCar.turnOn();
+
+
         //ctrl + alt + l
     }
 }
