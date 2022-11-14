@@ -1,4 +1,6 @@
-public class Animal {
+package com.wsb;
+
+public class Animal implements Sellable {
     String species;
     String name;
     Double weight;
@@ -37,11 +39,25 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "Animal{" +
+        return "com.wsb.Animal{" +
                 "species='" + species + '\'' +
                 ", name='" + name + '\'' +
                 ", weight=" + weight +
                 ", isAlive=" + isAlive +
                 '}';
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+        if (seller.pet != null) {
+            if (buyer.getCash() >= price) {
+                buyer.pet = (seller.pet);
+                seller.pet = (null);
+                seller.setCash(seller.getCash() + price);
+                buyer.setCash(buyer.getCash() - price);
+                System.out.println("Kupujący " + buyer + " kupił " + buyer.pet
+                        + " od " + seller + " za " + price + " PLN");
+            }
+        }
     }
 }

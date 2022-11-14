@@ -1,6 +1,8 @@
-package devices;
+package com.wsb.devices;
 
-abstract public class Device {
+import com.wsb.Sellable;
+
+abstract public class Device implements Sellable {
     final String model;
     final String producer;
     String color;
@@ -22,12 +24,10 @@ abstract public class Device {
 
     @Override
     public String toString() {
-        return "Device{" +
-                "model='" + model + '\'' +
+        return "model='" + model + '\'' +
                 ", producer='" + producer + '\'' +
                 ", color='" + color + '\'' +
                 ", year=" + year +
-                ", value=" + value +
-                '}';
+                ", value=" + value;
     }
 }

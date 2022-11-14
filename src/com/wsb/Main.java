@@ -1,4 +1,6 @@
-import devices.Car;
+package com.wsb;
+
+import com.wsb.devices.Car;
 
 public class Main {
     public static void main(String[] args) {
@@ -36,12 +38,26 @@ public class Main {
 
         me.setCar(myCar);
         System.out.println(me.getCar().getValue());
+        System.out.println(me.getCar());
 
         Car newCar = new Car("Mazda", "RX-7", 1990, "White", 300.0);
         System.out.println(newCar == myCar);
         System.out.println(newCar);
 
         myCar.turnOn();
+
+
+        Human buyer = new Human();
+        buyer.setCash(100.0);
+        me.setCash(0.0);
+//        System.out.println("auto kupca: " + buyer.getCar() + " auto moje: "
+//                + me.getCar() + " kasa kupca: " + buyer.getCash()
+//                + " moja kasa: " + me.getCash());
+        me.getCar().sell(me, buyer, 50.0);
+//        System.out.println("auto kupca: " + buyer.getCar() + " auto moje: "
+//                + me.getCar() + " kasa kupca: " + buyer.getCash()
+//                + " moja kasa: " + me.getCash());
+        me.pet.sell(me, buyer, 12.5);
 
 
         //ctrl + alt + l
