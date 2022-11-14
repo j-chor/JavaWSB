@@ -1,3 +1,5 @@
+import devices.Car;
+
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
 
@@ -13,10 +15,10 @@ public class Human {
     }
 
     public void setCar(Car car) {
-        if (this.salary >= car.value) {
+        if (this.salary >= car.getValue()) {
             System.out.println("Kupiono samochód za gotówkę");
             this.car = car;
-        } else if (this.salary >= car.value * (1 / 12)) {
+        } else if (this.salary >= car.getValue() * (1 / 12)) {
             System.out.println("Kupiono samochód na kredyt (trudno)");
             this.car = car;
         } else System.out.println("Za mało kasy zarabiasz, zmień pracę i weź kredyt");
@@ -42,4 +44,15 @@ public class Human {
         this.salary = salary;
     }
 
+    @Override
+    public String toString() {
+        return "Human{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", pet=" + pet +
+                ", yearOfBirth=" + yearOfBirth +
+                ", car=" + car +
+                ", salary=" + salary +
+                '}';
+    }
 }

@@ -1,3 +1,5 @@
+import devices.Car;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
@@ -26,17 +28,18 @@ public class Main {
         Human me = new Human();
         me.pet = dog;
 
-        Car myCar = new Car("Fiat", "Punto");
-        myCar.color = "Zielony";
-        myCar.year = 1999;
-        myCar.value = 100.0;
+        Car myCar = new Car("Fiat", "Punto", 1999, "Zielony", 100.0);
 
 
         me.setSalary(200.0);
         me.getSalary();
 
         me.setCar(myCar);
-        System.out.println(me.getCar().model);
+        System.out.println(me.getCar().getValue());
+
+        Car newCar = new Car("Mazda", "RX-7", 1990, "White", 300.0);
+        System.out.println(newCar == myCar);
+        System.out.println(newCar);
 
         //ctrl + alt + l
     }

@@ -34,4 +34,14 @@ public class Animal {
             System.out.println("Halo policja?");
         }
     }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "species='" + species + '\'' +
+                ", name='" + name + '\'' +
+                ", weight=" + weight +
+                ", isAlive=" + isAlive +
+                '}';
+    }
 }
