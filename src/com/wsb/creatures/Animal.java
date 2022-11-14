@@ -1,10 +1,12 @@
-package com.wsb;
+package com.wsb.creatures;
 
-public class Animal implements Sellable {
-    String species;
-    String name;
-    Double weight;
-    Boolean isAlive;
+import com.wsb.Sellable;
+
+abstract public class Animal implements Sellable, Feedable{
+    public String species;
+    public String name;
+    public Double weight;
+    public Boolean isAlive;
 
     void checkWeight() {
         if (this.weight <= 0.0) {
@@ -17,7 +19,7 @@ public class Animal implements Sellable {
         this.species = species;
     }
 
-    void feed() {
+    public void feed() {
         checkWeight();
         if (this.isAlive) {
             this.weight += 0.5;
@@ -27,7 +29,7 @@ public class Animal implements Sellable {
         }
     }
 
-    void takeForAWalk() {
+    public void takeForAWalk() {
         checkWeight();
         if (this.isAlive) {
             this.weight -= 0.5;
@@ -39,7 +41,7 @@ public class Animal implements Sellable {
 
     @Override
     public String toString() {
-        return "com.wsb.Animal{" +
+        return "com.wsb.creatures.Animal{" +
                 "species='" + species + '\'' +
                 ", name='" + name + '\'' +
                 ", weight=" + weight +

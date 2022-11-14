@@ -1,6 +1,6 @@
 package com.wsb.devices;
 
-import com.wsb.Human;
+import com.wsb.creatures.Human;
 
 public class Phone extends Device {
 

@@ -1,7 +1,6 @@
 package com.wsb.devices;
 
-import com.wsb.Human;
-import com.wsb.Sellable;
+import com.wsb.creatures.Human;
 
 public class Car extends Device {
 

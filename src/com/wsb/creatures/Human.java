@@ -1,4 +1,4 @@
-package com.wsb;
+package com.wsb.creatures;
 
 import com.wsb.devices.Car;
 import com.wsb.devices.Phone;
@@ -10,7 +10,7 @@ public class Human {
     public Phone phone;
     String firstName;
     String lastName;
-    Animal pet;
+    public Animal pet;
     Integer yearOfBirth;
     private Car car;
     private Double cash;
