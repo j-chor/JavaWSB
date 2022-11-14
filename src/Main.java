@@ -1,14 +1,12 @@
-package big;
-
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
-        Pet dog = new Pet("canis");
+        Animal dog = new Animal("canis");
         dog.weight = 10.0;
         dog.species = "canis";
         dog.name = "Szarik";
 
-        Pet cat = new Pet("cat");
+        Animal cat = new Animal("cat");
         cat.name = "kici";
         cat.weight = 2.0;
 
@@ -28,7 +26,9 @@ public class Main {
         Human me = new Human();
         me.pet = dog;
 
-        Car myCar = new Car("Fiat", "Punto", 1999, "red");
+        Car myCar = new Car("Fiat", "Punto");
+        myCar.color = "Zielony";
+        myCar.year = 1999;
         myCar.value = 100.0;
 
 
@@ -38,7 +38,6 @@ public class Main {
         me.setCar(myCar);
         System.out.println(me.getCar().model);
 
-        System.out.print(myCar);
         //ctrl + alt + l
     }
 }
