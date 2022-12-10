@@ -3,6 +3,8 @@ package com.wsb.creatures;
 import com.wsb.Sellable;
 
 abstract public class Animal implements Sellable, Feedable{
+    private static final Double DEFAULT_WALK_DISTANCE = 1.0;
+    private static final Boolean DEFAULT_RUNNING_BOOL = false;
     public String species;
     public String name;
     public Double weight;
@@ -30,15 +32,28 @@ abstract public class Animal implements Sellable, Feedable{
     }
 
     public void takeForAWalk() {
+        this.takeForAWalk(DEFAULT_WALK_DISTANCE);
+    }
+    
+    public void takeForAWalk(Double distance) {
+        takeForAWalk(distance, DEFAULT_RUNNING_BOOL);
+    }
+
+    public void takeForAWalk(Double distance, Boolean isRunning) {
         checkWeight();
         if (this.isAlive) {
-            this.weight -= 0.5;
+            if (isRunning) {
+                this.weight -= distance * 1.5;
+            }
+            else {
+                this.weight -= distance * 0.5;
+            }
             System.out.println("dzięki za spacer");
         } else {
             System.out.println("Halo policja?");
         }
     }
-
+    
     @Override
     public String toString() {
         return "com.wsb.creatures.Animal{" +

@@ -3,7 +3,7 @@ package com.wsb;
 import com.wsb.creatures.Animal;
 import com.wsb.creatures.Human;
 import com.wsb.creatures.Pet;
-import com.wsb.devices.Car;
+import com.wsb.devices.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -33,7 +33,7 @@ public class Main {
         Human me = new Human();
         me.pet = dog;
 
-        Car myCar = new Car("Fiat", "Punto", 1999, "Zielony", 100.0);
+        LPGCar myCar = new LPGCar("Fiat", "Punto", 1999, "Zielony", 100.0);
 
 
         me.setSalary(200.0);
@@ -43,7 +43,7 @@ public class Main {
         System.out.println(me.getCar().getValue());
         System.out.println(me.getCar());
 
-        Car newCar = new Car("Mazda", "RX-7", 1990, "White", 300.0);
+        LPGCar newCar = new LPGCar("Mazda", "RX-7", 1990, "White", 300.0);
         System.out.println(newCar);
 
         myCar.turnOn();
@@ -65,8 +65,22 @@ public class Main {
         buyer.pet.feed(10.0);
         System.out.println(buyer.pet.weight);
 
+        System.out.println(buyer.pet.weight);
+        buyer.pet.takeForAWalk();
+        System.out.println(buyer.pet.weight);
+        buyer.pet.takeForAWalk(4.0);
+        System.out.println(buyer.pet.weight);
+        buyer.pet.takeForAWalk(2.0, true);
+        System.out.println(buyer.pet.weight);
 
+        Phone myPhone = new Phone("iPhone 13", "Apple", "white", 2022, 1000.0);
+        myPhone.installAnApp("Kalkulator");
 
+        ElectricCar tesla = new ElectricCar("Tesla", "Elektro", 2020, "black", 20000.0);
+        tesla.refuel();
+
+        CarWash carWash = new CarWash();
+        carWash.wash(tesla);
         //ctrl + alt + l
     }
 }

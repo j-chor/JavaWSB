@@ -2,11 +2,13 @@ package com.wsb.devices;
 
 import com.wsb.creatures.Human;
 
-public class Car extends Device {
+public abstract class Car extends Device {
 
     public Car(String producer, String model, Integer year, String color, Double value) {
         super(producer, model, year, color, value);
     }
+
+    abstract public void refuel();
 
     @Override
     public void turnOn() {
